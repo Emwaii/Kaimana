@@ -34,19 +34,19 @@
                   <p class="mb-0">Enter your email and password to sign in</p>
                 </div>
                 <div class="card-body">
-                  <form role="form">
+                  <form action="<?= site_url('login') ?>" method="POST" autocomplete="off">
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email">
+                      <input type="text" class="form-control form-control-lg" placeholder="Username" id="username_pengguna" name="username_pengguna">
                     </div>
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" placeholder="Password" aria-label="Password">
+                      <input type="password" class="form-control form-control-lg" placeholder="Password" id="password_pengguna" name="password_pengguna">
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="rememberMe">
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
                     <div class="text-center">
-                      <a href="<?= site_url('dashboard') ?>"type="button" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</a>
+                      <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
                     </div>
                   </form>
                 </div>
@@ -76,6 +76,7 @@
   <script src="<?= base_url('assets') ?>/js/core/bootstrap.min.js"></script>
   <script src="<?= base_url('assets') ?>/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="<?= base_url('assets') ?>/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -90,5 +91,14 @@
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="<?= base_url('assets') ?>/js/argon-dashboard.min.js?v=2.0.4"></script>
 </body>
+<?php if ($this->session->flashdata('notif')) : ?>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "<?php echo $this->session->flashdata('notif'); ?>",
+        });
+    </script>
+<?php endif ?>
 
 </html>
