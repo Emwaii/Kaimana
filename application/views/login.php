@@ -12,13 +12,13 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="<?= base_url('assets') ?>/css/nucleo-icons.css" rel="stylesheet">
-  <link href="<?= base_url('assets') ?>/css/nucleo-svg.css" rel="stylesheet">
+  <link href="<?= base_url('assets') ?>/login/css/nucleo-icons.css" rel="stylesheet">
+  <link href="<?= base_url('assets') ?>/login/css/nucleo-svg.css" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="<?= base_url('assets') ?>/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="<?= base_url('assets') ?>/login/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link id="pagestyle" href="<?= base_url('assets') ?>/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <link id="pagestyle" href="<?= base_url('assets') ?>/login/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -72,10 +72,10 @@
     </section>
   </main>
   <!--   Core JS Files   -->
-  <script src="<?= base_url('assets') ?>/js/core/popper.min.js"></script>
-  <script src="<?= base_url('assets') ?>/js/core/bootstrap.min.js"></script>
-  <script src="<?= base_url('assets') ?>/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="<?= base_url('assets') ?>/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="<?= base_url('assets') ?>/login/js/core/popper.min.js"></script>
+  <script src="<?= base_url('assets') ?>/login/js/core/bootstrap.min.js"></script>
+  <script src="<?= base_url('assets') ?>/login/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="<?= base_url('assets') ?>/login/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
@@ -89,7 +89,7 @@
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="<?= base_url('assets') ?>/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script src="<?= base_url('assets') ?>/login/js/argon-dashboard.min.js?v=2.0.4"></script>
 </body>
 <?php if ($this->session->flashdata('notif')) : ?>
     <script>
