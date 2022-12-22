@@ -8,10 +8,15 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
 		$this->load->helper('url');
+		$this->load->model('M_Pemilihan');
 	}
 
 	public function index()
 	{
-		$this->load->view('login');
+		
+		$data["all"] = $this->M_Pemilihan->getAlldata();
+		$this->load->view('index',$data);
 	}
+
+	
 }
